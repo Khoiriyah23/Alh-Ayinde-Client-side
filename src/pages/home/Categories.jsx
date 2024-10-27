@@ -7,30 +7,26 @@ import { Link } from 'react-router-dom'
 
 const Categories = () => {
     const categories = [
-        {name: 'Accessories', path: 'accessories', image:category1},
-        {name: 'Accessories', path: 'accessories', image:category2},
-        {name: 'Accessories', path: 'accessories', image:category3},
-        {name: 'Accessories', path: 'accessories', image:category4},
+        { name: 'Lumber', path: 'lumber', image: category1 },
+        { name: 'Wood Processing', path: 'wood-processing', image: category2 },
+        { name: 'Custom Cuts', path: 'custom-cuts', image: category3 },
+        { name: 'Furniture Production', path: 'furniture-production', image: category4 },
     ]
 
-  return (
-    <>
-    <div className='product__grid'>
-  {categories.map((category, index) => (
-    <Link 
-      key={`${category.name}-${index}`} // Use both name and index to ensure uniqueness
-      to={`/categories/${category.path}`} 
-      className='categories__card'
-    >
-      <img src={category.image} alt={category.name} />
-      <h4>{category.name}</h4>
-    </Link>
-  ))}
-</div>
-
-    
-    </>
-  )
+    return (
+        <div className='product__grid'>
+            {categories.map((category, index) => (
+                <Link 
+                    key={`${category.name}-${index}`} 
+                    to={`/categories/${category.path}`} 
+                    className='categories__card'
+                >
+                    <img src={category.image} alt={category.name} />
+                    <h4>{category.name}</h4>
+                </Link>
+            ))}
+        </div>
+    )
 }
 
 export default Categories
