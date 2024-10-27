@@ -22,7 +22,7 @@ const Footer = () => {
                     </p>
                     <p>
                         <span><i className='ri-phone-fill'></i></span>
-                        (+234) 9131578384 
+                        (+234) 8064287900 
                     </p>
             </div>
 
